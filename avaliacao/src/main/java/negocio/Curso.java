@@ -33,4 +33,8 @@ public class Curso {
         setAno(ano);
         setNome(nome);
     }
+    @Override
+    public String toString() {
+        return "curso Id: "+this.getIden()+"\n"+"   Nome: "+this.getNome()+"\n"+"   Ano: "+this.getAno()+"\n";
+    }
 }
