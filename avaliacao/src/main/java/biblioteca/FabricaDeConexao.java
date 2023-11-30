@@ -12,12 +12,10 @@ public class FabricaDeConexao {
 
     public static Connection obterConexao() {
         try {
-            return DriverManager.getConnection(
-                    textoDeConexao, usuario, senha);
+            return DriverManager.getConnection(textoDeConexao, usuario, senha);
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new RuntimeException(e);
         }
-        return null;
     }
 
 }
