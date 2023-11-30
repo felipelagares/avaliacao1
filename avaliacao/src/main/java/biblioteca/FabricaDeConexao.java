@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class FabricaDeConexao {
     public static String usuario = "root";
     public static String senha = "admin";
-    public static String textoDeConexao = "jdbc:mariadb://127.0.0.1:3306/avaliacao1";
+    public static String textoDeConexao = "jdbc:mariadb://localhost:3306/avaliacao1";
 
 
     public static Connection obterConexao() {
