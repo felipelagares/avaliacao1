@@ -155,10 +155,6 @@ public class Menu {
                 choice = showOptions();
             }
 
-
-
-
-
         } catch (ParserConfigurationException e) {
             throw new RuntimeException(e);
         } catch (IOException e) {
