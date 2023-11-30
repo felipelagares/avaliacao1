@@ -1,2 +1,2 @@
 # avaliacao1
-criado para manter a avaliacao de persistencia de dados
+O script para criação do banco de dados está nomeado como script.sql ao lado da pasta src
