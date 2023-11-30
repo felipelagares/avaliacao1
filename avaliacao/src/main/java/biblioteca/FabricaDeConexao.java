@@ -12,9 +12,8 @@ public class FabricaDeConexao {
 
     public static Connection obterConexao() {
         try {
-            Connection con = DriverManager.getConnection(
+            return DriverManager.getConnection(
                     textoDeConexao, usuario, senha);
-            return con;
         } catch (SQLException e) {
             e.printStackTrace();
         }
