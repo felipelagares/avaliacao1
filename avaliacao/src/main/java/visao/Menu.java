@@ -80,7 +80,9 @@ public class Menu {
     }
 
     public static void main(String[] args) {
-        String caminhoDadosXml = "C://Users//felip//Desktop//avaliacaopdd//avaliacao1//avaliacao//dados.xml";
+        Scanner sc = new Scanner(System.in);
+        System.out.println("caminho para dados.xml: ")
+        String caminhoDadosXml = sc.nextLine();
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         try {
@@ -90,7 +92,6 @@ public class Menu {
             NodeList cursoList = doc.getElementsByTagName("curso");
 
             int choice = showOptions();
-            Scanner sc = new Scanner(System.in);
 
             ArrayList items = getAllItems(cursoList);
             List<Curso> cList = (List<Curso>) items.get(0);//lista de cursos
