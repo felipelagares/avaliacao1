@@ -34,4 +34,12 @@ public class Disciplina {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+    @Override
+    public String toString() {
+        return "disciplina " +
+                "nome: " + nome + "\n" +
+                "   ch: " + ch + "\n" +
+                "   id do curso: " + iden_curso;
+    }
 }
