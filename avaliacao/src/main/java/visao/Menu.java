@@ -81,7 +81,7 @@ public class Menu {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.println("caminho para dados.xml: ")
+        System.out.println("caminho para dados.xml: ");
         String caminhoDadosXml = sc.nextLine();
 
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -91,12 +91,13 @@ public class Menu {
 
             NodeList cursoList = doc.getElementsByTagName("curso");
 
-            int choice = showOptions();
+
 
             ArrayList items = getAllItems(cursoList);
             List<Curso> cList = (List<Curso>) items.get(0);//lista de cursos
             List<Disciplina> dList = (List<Disciplina>) items.get(1);//lista de disciplinas
-
+            System.out.println(cList.size());
+            int choice = showOptions();
             while(choice != 5){
 
                 ArrayList result = new ArrayList<>();
@@ -115,8 +116,8 @@ public class Menu {
                                 result.add(disciplina);
                             }
                         }
-                        for(int i=0; i< result.size(); i++){
-                            System.out.println(result.get(i));
+                        for (Object o : result) {
+                            System.out.println(o.toString());
                         }
                         break;
                     case 2:
@@ -132,13 +133,13 @@ public class Menu {
                             }
                         }
                         for(int i=0; i< result.size(); i++){
-                            System.out.println(result.get(i));
+                            System.out.println(result.get(i).toString());
                         }
                         break;
                     case 3:
                         result.addAll(cList);
                         for(int i=0; i< result.size(); i++){
-                            System.out.println(result.get(i));
+                            System.out.println(result.get(i).toString());
                         }
                         break;
                     case 4:
